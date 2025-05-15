@@ -87,12 +87,14 @@
       background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
       box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
       transition: all 0.35s ease;
+      color: white; /* Added white text */
     }
 
     a.inline-block:hover, button:hover {
       background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
       box-shadow: 0 12px 30px rgba(30, 64, 175, 0.6);
       transform: translateY(-3px);
+      color: white; /* Ensure hover text stays white */
     }
 
     input[type="text"], input[type="email"], textarea {
@@ -131,23 +133,23 @@
 
   <!-- Hero Section -->
   <header class="relative max-w-7xl mx-auto my-16 rounded-lg overflow-hidden">
-  <img
-    src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/3.jpg"
-    alt="Window cleaning example"
-    class="w-full h-80 md:h-[36rem] object-cover"
-  />
-  <img
-    src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Logo.png"
-    alt="Logo"
-    class="absolute top-4 left-4 w-24 h-24 md:w-32 md:h-32 object-contain"
-  />
-</header>
+    <img
+      src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/3.jpg"
+      alt="Window cleaning example"
+      class="w-full h-80 md:h-[36rem] object-cover"
+    />
+    <img
+      src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Logo.png"
+      alt="Logo"
+      class="absolute top-4 left-4 w-24 h-24 md:w-32 md:h-32 object-contain"
+    />
+  </header>
 
   <!-- Text Section -->
   <section class="text-center py-20 px-6 bg-white rounded-lg shadow-lg max-w-4xl mx-auto -mt-20 relative z-10">
     <h1>The Window Guys Consulting</h1>
     <p class="mb-10">Guidance from experts to enhance your window cleaning business.</p>
-    <a href="#contact" class="inline-block">Get Started</a>
+    <a href="#contact" class="inline-block text-white">Get Started</a>
   </section>
 
   <!-- Services Section -->
@@ -207,7 +209,7 @@
           <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
-        <button type="submit" class="w-full">Send Message</button>
+        <button type="submit" class="w-full text-white">Send Message</button>
       </form>
     </div>
   </section>
@@ -219,4 +221,3 @@
 
 </body>
 </html>
-
