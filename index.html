@@ -8,35 +8,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <meta name="description" content="Window cleaning business consulting services to help your business grow." />
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
       font-family: 'Poppins', sans-serif;
       background-color: #f9fafb;
     }
 
-    /* Parallax background for services */
     #services {
       position: relative;
-      background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_p-ZNAV053UQ7kNvwEiTf_b&_nc_oc=AdmXYh2o-Czovb3_6-ajjFEtdXK-cHFWCAP0MXCD-RPCvAF0N_gk1uXRGSRudqDtu6Vun8Z3XlxqEaPj2YF38XkO&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=oNZkRwXmPRUD36ACVXOdEw&oh=00_AfJs9dSebc-RGzAi2bxaama9nEr1tuu0TYCKm-ZoPvMCBg&oe=682B45CA');
+      background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?...');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: fixed; /* Parallax effect */
+      background-attachment: fixed;
       color: white;
-      padding-top: 6rem; /* increased padding */
-      padding-bottom: 6rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding: 6rem 2rem;
       border-radius: 1rem;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      margin: 2rem auto;
-      max-width: 1200px;
     }
 
     #services::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.4); /* slightly lighter overlay */
+      background-color: rgba(0, 0, 0, 0.4);
       z-index: 0;
       border-radius: 1rem;
     }
@@ -46,7 +44,6 @@
       z-index: 1;
     }
 
-    /* Inner cards */
     #services .bg-white {
       background-color: white !important;
       color: black !important;
@@ -59,11 +56,9 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
 
-    /* Headings */
     h1 {
       font-size: 3.5rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
       color: #111827;
     }
     h2 {
@@ -77,14 +72,12 @@
       color: #1f2937;
     }
 
-    /* Paragraphs */
     p {
       font-size: 1.125rem;
       line-height: 1.7;
       color: #4b5563;
     }
 
-    /* Button styles */
     a.inline-block, button {
       font-size: 1.25rem;
       padding: 1rem 2.5rem;
@@ -100,13 +93,13 @@
       transform: translateY(-3px);
     }
 
-    /* Contact form input & textarea */
     input[type="text"], input[type="email"], textarea {
       font-size: 1.125rem;
       padding: 1rem 1.25rem;
       border-radius: 0.75rem;
       border: 2px solid #d1d5db;
       transition: border-color 0.3s ease;
+      width: 100%;
     }
     input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
       border-color: #3b82f6;
@@ -114,72 +107,69 @@
       box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
     }
 
-    /* About section tweaks */
     #about p {
       font-size: 1.25rem;
       color: #374151;
     }
 
-    /* Footer */
     footer {
       font-weight: 600;
       font-size: 1rem;
       letter-spacing: 0.05em;
       background: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
       box-shadow: 0 -2px 10px rgba(37, 99, 235, 0.4);
-      user-select: none;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section: just background image -->
+  <!-- Hero Section -->
   <header 
-    class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative rounded-lg max-w-7xl mx-auto"
-    style="background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/306838653_522906506501751_5116915148380637796_n.png?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=RqXwH9YpQ1wQ7kNvwGnXiEj&_nc_oc=AdmVDuhCA9mBrHG5kO2h9Q_wJ6y7I6_MYeVz4d8I17UER--399zcdokUUiLxNEzWsdNzTZF6S-vyylmawy6MDD2-&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ZPembV4ZRUdA6Qd7ccee7Q&oh=00_AfKc21PzqqKLa9NT0DxrEewhFf0xDqWBgQccgL81CJ_1XQ&oe=682B3B28');"
+    class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative rounded-lg w-full"
+    style="background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/...');"
   >
-    <div class="relative max-w-7xl mx-auto h-full flex items-center justify-center"></div>
+    <div class="h-full flex items-center justify-center"></div>
   </header>
 
-  <!-- Text Section below the image -->
-  <section class="text-center py-20 px-6 bg-white rounded-lg shadow-lg max-w-4xl mx-auto -mt-20 relative z-10">
+  <!-- Intro Text -->
+  <section class="text-center py-20 px-6 bg-white rounded-lg shadow-lg w-full -mt-20 relative z-10">
     <h1>The Window Guys Consulting</h1>
     <p class="mb-10">Guidance from experts to enhance your window cleaning business.</p>
     <a href="#contact" class="inline-block">Get Started</a>
   </section>
 
-  <!-- Services Section with parallax background -->
-<section id="services" class="mx-auto">
-  <h2 class="text-center mb-14 text-white text-4xl font-bold">Our Services</h2>
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-    <!-- Service Items -->
-    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="mb-3 text-xl font-semibold">Business Growth Planning</h3>
-      <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+  <!-- Services -->
+  <section id="services" class="w-full mt-20">
+    <h2 class="text-center mb-14 text-white text-4xl font-bold">Our Services</h2>
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="mb-3 text-xl font-semibold">Business Growth Planning</h3>
+        <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="mb-3 text-xl font-semibold">Pricing & Financial Advice</h3>
+        <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-lg">
+        <h3 class="mb-3 text-xl font-semibold">Marketing & Customer Growth</h3>
+        <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
+      </div>
     </div>
-    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="mb-3 text-xl font-semibold">Pricing & Financial Advice</h3>
-      <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
-    </div>
-    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="mb-3 text-xl font-semibold">Marketing & Customer Growth</h3>
-      <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-  <!-- About Section with image next to text -->
-  <section id="about" class="bg-gray-100 py-20 px-6 rounded-lg max-w-6xl mx-auto mt-20 shadow-lg">
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-20 px-6 w-full mt-20">
     <h2 class="text-center mb-10">About The Window Guys</h2>
     <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
-      <!-- Text: 2/3 width -->
       <div class="md:w-2/3 text-center md:text-left">
         <p>Window cleaning, gutter cleaning, awnings, screens, and more. Licensed and insured for your protection. Available for commercial and residential jobs. Serving you since 1993 with affordable, trusted service.</p>
       </div>
-      <!-- Image: 1/3 width -->
       <div class="md:w-1/3">
         <img
-          src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/466822402_10221179153148609_1032206424564309503_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wqELPRXeWWoQ7kNvwHd2R9x&_nc_oc=AdnWab9bMqLyGeV-PJMNZ7WOTpSSgb0uAef1aWJlwGRiKP2JgyveM_aqrBiYsxeKmeQ2FC81ZRyi3rXiAwxKEnqA&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=4mFg_VRLaU_kvf1UeTCRZQ&oh=00_AfKqqMvCoQBtxS6a0sIkB3-CRsNub481D9iB6bSAeDdcIw&oe=682B5E97"
+          src="https://scontent-dfw5-2.xx.fbcdn.net/..."
           alt="Window cleaning example"
           class="rounded-xl shadow-lg w-full object-cover"
         />
@@ -187,10 +177,10 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 max-w-xl mx-auto mt-20">
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 w-full mt-20">
     <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
-    <div class="bg-white p-10 rounded-2xl shadow-xl">
+    <div class="bg-white p-10 rounded-2xl shadow-xl max-w-xl mx-auto">
       <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-6">
         <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
         <p class="text-center text-sm text-gray-600 mb-6">
