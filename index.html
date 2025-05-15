@@ -6,23 +6,55 @@
   <title>The Window Guys</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <meta name="description" content="Window cleaning business consulting services to help your business grow." />
+  <style>
+    /* Parallax background for services */
+    #services {
+      position: relative;
+      background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_p-ZNAV053UQ7kNvwEiTf_b&_nc_oc=AdmXYh2o-Czovb3_6-ajjFEtdXK-cHFWCAP0MXCD-RPCvAF0N_gk1uXRGSRudqDtu6Vun8Z3XlxqEaPj2YF38XkO&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=oNZkRwXmPRUD36ACVXOdEw&oh=00_AfJs9dSebc-RGzAi2bxaama9nEr1tuu0TYCKm-ZoPvMCBg&oe=682B45CA');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Parallax effect */
+      color: white;
+      padding-top: 5rem; /* roughly py-20 */
+      padding-bottom: 5rem;
+      padding-left: 1.5rem; /* roughly px-6 */
+      padding-right: 1.5rem;
+    }
+
+    #services::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+      z-index: 0;
+      border-radius: 0.75rem; /* optional */
+    }
+
+    #services > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Inner cards keep white backgrounds and shadows */
+    #services .bg-white {
+      background-color: white !important;
+      color: black !important;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
   <!-- Hero Section: just background image -->
- <header 
-  class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative"
-  style="background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/306838653_522906506501751_5116915148380637796_n.png?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=RqXwH9YpQ1wQ7kNvwGnXiEj&_nc_oc=AdmVDuhCA9mBrHG5kO2h9Q_wJ6y7I6_MYeVz4d8I17UER--399zcdokUUiLxNEzWsdNzTZF6S-vyylmawy6MDD2-&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ZPembV4ZRUdA6Qd7ccee7Q&oh=00_AfKc21PzqqKLa9NT0DxrEewhFf0xDqWBgQccgL81CJ_1XQ&oe=682B3B28');"
->
-  <!-- Optional dark overlay for better contrast -->
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-
-  <!-- Content inside header (if any) -->
-  <div class="relative max-w-7xl mx-auto h-full flex items-center justify-center">
-    <!-- Example: Add text or logo here -->
-  </div>
-</header>
-
+  <header 
+    class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative"
+    style="background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/306838653_522906506501751_5116915148380637796_n.png?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=RqXwH9YpQ1wQ7kNvwGnXiEj&_nc_oc=AdmVDuhCA9mBrHG5kO2h9Q_wJ6y7I6_MYeVz4d8I17UER--399zcdokUUiLxNEzWsdNzTZF6S-vyylmawy6MDD2-&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=ZPembV4ZRUdA6Qd7ccee7Q&oh=00_AfKc21PzqqKLa9NT0DxrEewhFf0xDqWBgQccgL81CJ_1XQ&oe=682B3B28');"
+  >
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative max-w-7xl mx-auto h-full flex items-center justify-center">
+      <!-- Optional content here -->
+    </div>
+  </header>
 
   <!-- Text Section below the image -->
   <section class="text-center py-16 px-6 bg-white">
@@ -31,96 +63,70 @@
     <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Get Started</a>
   </section>
 
-  <!-- Services Section -->
- <style>
-  #services {
-    position: relative;
-    background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_p-ZNAV053UQ7kNvwEiTf_b&_nc_oc=AdmXYh2o-Czovb3_6-ajjFEtdXK-cHFWCAP0MXCD-RPCvAF0N_gk1uXRGSRudqDtu6Vun8Z3XlxqEaPj2YF38XkO&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=oNZkRwXmPRUD36ACVXOdEw&oh=00_AfJs9dSebc-RGzAi2bxaama9nEr1tuu0TYCKm-ZoPvMCBg&oe=682B45CA');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    padding-top: 5rem; /* roughly py-20 */
-    padding-bottom: 5rem;
-    padding-left: 1.5rem; /* roughly px-6 */
-    padding-right: 1.5rem;
-  }
-
-  #services::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
-    z-index: 0;
-    border-radius: 0.75rem; /* to match rounded corners if needed */
-  }
-
-  #services > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Inner cards keep white backgrounds and shadows */
-  #services .bg-white {
-    background-color: white !important;
-    color: black !important;
-  }
-</style>
-
-<section id="services" class="">
-  <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-    <!-- Service Item -->
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
-      <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+  <!-- Services Section with parallax background -->
+  <section id="services" class="">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Service Item -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
+        <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
+        <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
+        <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
-      <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
-      <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-  <!-- About Section -->
+  <!-- About Section with image next to text -->
   <section id="about" class="bg-gray-200 py-20 px-6">
     <h2 class="text-4xl font-bold text-center mb-10">About The Window Guys</h2>
-    <div class="max-w-4xl mx-auto text-center text-lg text-gray-800">
-      <p>Window cleaning, gutter cleaning, awnings, screens, and more. Licensed and insured for your protection. Available for commercial and residential jobs. Serving you since 1993 with affordable, trusted service.</p>
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-10">
+      <!-- Text: 2/3 width -->
+      <div class="md:w-2/3 text-center md:text-left text-lg text-gray-800">
+        <p>Window cleaning, gutter cleaning, awnings, screens, and more. Licensed and insured for your protection. Available for commercial and residential jobs. Serving you since 1993 with affordable, trusted service.</p>
+      </div>
+      <!-- Image: 1/3 width -->
+      <div class="md:w-1/3">
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+          alt="Window cleaning example"
+          class="rounded-xl shadow-lg w-full object-cover"
+        />
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
- <section id="contact" class="py-20 px-6">
-  <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
-  <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-    <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-4">
-      <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
-      
-      <p class="text-center text-sm text-gray-600 mb-6">
-        Your message will be sent securely. We’ll get back to you shortly.
-      </p>
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-        <input type="email" id="email" name="_replyto" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </div>
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-        <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
-    </form>
-  </div>
-</section>
-
+  <section id="contact" class="py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+      <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-4">
+        <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
+        <p class="text-center text-sm text-gray-600 mb-6">
+          Your message will be sent securely. We’ll get back to you shortly.
+        </p>
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-blue-600 text-white py-6 text-center mt-10">
