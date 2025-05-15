@@ -23,24 +23,59 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-20 px-6">
-    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <!-- Service Item -->
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
-        <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
-        <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
-        <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
-      </div>
+ <style>
+  #services {
+    position: relative;
+    background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_p-ZNAV053UQ7kNvwEiTf_b&_nc_oc=AdmXYh2o-Czovb3_6-ajjFEtdXK-cHFWCAP0MXCD-RPCvAF0N_gk1uXRGSRudqDtu6Vun8Z3XlxqEaPj2YF38XkO&_nc_zt=23&_nc_ht=scontent-dfw5-2.xx&_nc_gid=oNZkRwXmPRUD36ACVXOdEw&oh=00_AfJs9dSebc-RGzAi2bxaama9nEr1tuu0TYCKm-ZoPvMCBg&oe=682B45CA');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 5rem; /* roughly py-20 */
+    padding-bottom: 5rem;
+    padding-left: 1.5rem; /* roughly px-6 */
+    padding-right: 1.5rem;
+  }
+
+  #services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+    z-index: 0;
+    border-radius: 0.75rem; /* to match rounded corners if needed */
+  }
+
+  #services > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Inner cards keep white backgrounds and shadows */
+  #services .bg-white {
+    background-color: white !important;
+    color: black !important;
+  }
+</style>
+
+<section id="services" class="">
+  <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <!-- Service Item -->
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
+      <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
     </div>
-  </section>
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
+      <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
+      <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
+    </div>
+  </div>
+</section>
 
   <!-- About Section -->
   <section id="about" class="bg-gray-200 py-20 px-6">
