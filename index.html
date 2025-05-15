@@ -159,24 +159,29 @@
   <a href="#contact" class="inline-block text-white">Get Started</a>
 </section>
   
-  <!-- Services Section -->
-  <section id="services" class="mx-auto">
-    <h2 class="text-center mb-14 text-white text-4xl font-bold">Our Services</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="mb-3 text-xl font-semibold">Business Growth Planning</h3>
-        <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
-      </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="mb-3 text-xl font-semibold">Pricing & Financial Advice</h3>
-        <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
-      </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <h3 class="mb-3 text-xl font-semibold">Marketing & Customer Growth</h3>
-        <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
-      </div>
-    </div>
-  </section>
+<!-- About Section -->
+<section id="about" class="bg-gray-50 py-20 px-8 rounded-xl max-w-4xl mx-auto mt-20 shadow-md text-center">
+  <h2 class="text-4xl font-extrabold mb-12 text-gray-900">About The Window Guys</h2>
+  <div class="space-y-8 max-w-3xl mx-auto text-left">
+    <p class="text-lg leading-relaxed text-gray-800">
+      Founded in 1993, The Window Guys is a trusted, locally owned and operated business proudly serving Fort Smith and the greater River Valley area. With over 30 years of industry expertise, we have established ourselves as leaders in both residential and commercial window cleaning and exterior property maintenance.
+    </p>
+    <p class="text-lg leading-relaxed text-gray-800">
+      Our unwavering dedication to professionalism, meticulous attention to detail, and commitment to exceeding customer expectations have earned us the confidence of homeowners, property managers, and business owners alike. We offer comprehensive services including window and gutter cleaning, awning maintenance, and screen care — all delivered with consistent quality and care.
+    </p>
+    <p class="text-lg leading-relaxed text-gray-800">
+      Fully licensed and insured, safety and transparency are paramount in every project we undertake. At The Window Guys, we go beyond cleaning — we partner with our clients to preserve and enhance the value and appearance of their properties.
+    </p>
+    <figure class="mt-10">
+      <img
+        src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/1.jpg"
+        alt="Professional window cleaning service in Fort Smith, AR"
+        class="rounded-xl shadow-lg w-full max-w-xl mx-auto"
+      />
+      <figcaption class="mt-4 text-sm text-gray-500">Expert window cleaning by The Window Guys in Fort Smith, Arkansas.</figcaption>
+    </figure>
+  </div>
+</section>
 
 
 <!-- About Section -->
@@ -200,31 +205,65 @@
   </div>
 </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 max-w-xl mx-auto mt-20">
-    <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
-    <div class="bg-white p-10 rounded-2xl shadow-xl">
-      <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-6">
-        <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
-        <p class="text-center text-sm text-gray-600 mb-6">
-          Your message will be sent securely. We’ll get back to you shortly.
-        </p>
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-        </div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-          <input type="email" id="email" name="_replyto" placeholder="Your Email" required />
-        </div>
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="w-full text-white">Send Message</button>
-      </form>
-    </div>
-  </section>
+ <!-- Contact Section -->
+<section id="contact" class="py-20 px-6 max-w-xl mx-auto mt-20">
+  <h2 class="text-4xl font-extrabold text-center mb-12 text-gray-900 tracking-tight">Get in Touch</h2>
+  <div class="bg-white rounded-3xl shadow-xl p-10 sm:p-12">
+    <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-8">
+      <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
+      <p class="text-center text-sm text-gray-500 mb-6">
+        Your message is sent securely. We’ll get back to you shortly.
+      </p>
+
+      <div>
+        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="w-full px-5 py-3 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          placeholder="Your Email"
+          required
+          class="w-full px-5 py-3 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="w-full px-5 py-3 rounded-xl border-2 border-gray-300 resize-none focus:border-blue-500 focus:ring-2 focus:ring-blue-300 transition"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-extrabold py-4 rounded-3xl shadow-lg transition-transform transform hover:-translate-y-1"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />
+        </svg>
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 
  <!-- Footer -->
 <footer class="bg-blue-600 text-white text-center py-6 shadow-inner">
