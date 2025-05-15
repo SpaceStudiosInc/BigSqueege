@@ -1,111 +1,80 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultant Landing Page</title>
-    <link rel="stylesheet" href="tailwind.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consultant Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="description" content="Professional consulting services to help your business grow.">
 </head>
 <body class="bg-gray-100 font-sans">
-    <!-- Hero Section -->
-    <header class="bg-blue-600 text-white py-16 text-center">
-        <h1 class="text-4xl font-bold">Expert Consulting Services</h1>
-        <p class="mt-4 text-lg">Unlock your business potential with tailored solutions.</p>
-        <a href="#contact" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Get Started</a>
-    </header>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Business Strategy</h3>
-                <p>Develop a roadmap for success with customized strategies.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Financial Consulting</h3>
-                <p>Optimize your finances with expert advice and planning.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold mb-2">Marketing Solutions</h3>
-                <p>Boost your brand with targeted marketing campaigns.</p>
-            </div>
+  <!-- Hero Section -->
+  <header class="bg-blue-600 text-white py-20 text-center">
+    <h1 class="text-5xl font-extrabold">Expert Consulting Services</h1>
+    <p class="mt-4 text-xl">Unlock your business potential with tailored solutions.</p>
+    <a href="#contact" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Get Started</a>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Service Item -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Business Strategy</h3>
+        <p class="text-gray-700">Develop a roadmap for success with customized strategies.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Financial Consulting</h3>
+        <p class="text-gray-700">Optimize your finances with expert advice and planning.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Marketing Solutions</h3>
+        <p class="text-gray-700">Boost your brand with targeted marketing campaigns.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-200 py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">About Us</h2>
+    <div class="max-w-4xl mx-auto text-center text-lg text-gray-800">
+      <p>With over 10 years of experience, we help businesses thrive through personalized and results-driven consulting. Our team is committed to understanding your needs and providing real solutions that make a difference.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10">Contact Us</h2>
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+      <!-- Note -->
+      <p class="text-center text-sm text-gray-600 mb-6">
+        Note: This form is static and does not submit. To enable functionality, connect to a backend or service like Formspree or Google Forms.
+      </p>
+
+      <!-- Form -->
+      <div class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-16 px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-lg">With over 10 years of experience, we provide professional consulting to help businesses thrive. Our team is dedicated to delivering results-driven solutions tailored to your needs.</p>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
-        <div class="max-w-lg mx-auto">
-            <p class="text-center mb-4">Note: Form submission requires a backend service. For now, contact us at <a href="mailto:your.email@example.com" class="text-blue-600">your.email@example.com</a>.</p>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium">Name</label>
-                    <input type="text" id="name" class="w-full p-2 border rounded-lg" placeholder="Your Name">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium">Email</label>
-                    <input type="email" id="email" class="w-full p-2 border rounded-lg" placeholder="Your Email">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-sm font-medium">Message</label>
-                    <textarea id="message" class="w-full p-2 border rounded-lg" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <button class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">Send Message</button>
-            </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         </div>
-    </section>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-600 text-white py-4 text-center">
-        <p>© 2025 Consultant Services. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white py-6 text-center mt-10">
+    <p>&copy; 2025 Consultant Services. All rights reserved.</p>
+  </footer>
 </body>
 </html>
