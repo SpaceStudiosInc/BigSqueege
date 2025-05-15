@@ -23,31 +23,30 @@
   </section>
 
   <!-- Services Section -->
-<section id="services" class="py-20 px-6">
-  <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
-  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-    <!-- Service Item -->
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
-      <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+  <section id="services" class="py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Service Item -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Business Growth Planning</h3>
+        <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
+        <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+        <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
+        <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Pricing & Financial Advice</h3>
-      <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
-    </div>
-    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-      <h3 class="text-2xl font-semibold mb-2">Marketing & Customer Growth</h3>
-      <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
-    </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- About Section -->
   <section id="about" class="bg-gray-200 py-20 px-6">
     <h2 class="text-4xl font-bold text-center mb-10">About The Window Guys</h2>
     <div class="max-w-4xl mx-auto text-center text-lg text-gray-800">
-      <p>With over 10 years of experience consulting for window cleaning professionals, we specialize in personalized, actionable strategies designed to boost your business’s efficiency and revenue. Let us help you shine in your market.</p>
+      <p>Window cleaning, gutter cleaning, awnings, screens, and more. Licensed and insured for your protection. Available for commercial and residential jobs. Serving you since 1993 with affordable, trusted service.</p>
     </div>
   </section>
 
@@ -55,25 +54,24 @@
   <section id="contact" class="py-20 px-6">
     <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
     <div class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-      <p class="text-center text-sm text-gray-600 mb-6">
-        Note: This form is static and does not submit. To enable functionality, connect to a backend or service like Formspree or Google Forms.
-      </p>
-
-      <div class="space-y-4">
+      <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-4">
+        <p class="text-center text-sm text-gray-600 mb-6">
+          Your message will be sent securely. We’ll get back to you shortly.
+        </p>
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-          <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
         <div>
           <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea id="message" rows="4" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         </div>
-        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
-      </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
+      </form>
     </div>
   </section>
 
