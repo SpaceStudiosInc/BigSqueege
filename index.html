@@ -8,18 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <meta name="description" content="Window cleaning business consulting services to help your business grow." />
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+    body {
       font-family: 'Poppins', sans-serif;
       background-color: #f9fafb;
     }
 
+    /* Parallax background for services */
     #services {
       position: relative;
-      background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/462474513_10220618019560620_4586007929206529016_n.jpg?...');
+      background-image: url('./images/2.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -28,6 +25,8 @@
       padding: 6rem 2rem;
       border-radius: 1rem;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      margin: 2rem auto;
+      max-width: 1200px;
     }
 
     #services::before {
@@ -51,6 +50,7 @@
       box-shadow: 0 12px 30px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     #services .bg-white:hover {
       transform: translateY(-10px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
@@ -59,6 +59,7 @@
     h1 {
       font-size: 3.5rem;
       font-weight: 800;
+      letter-spacing: -0.02em;
       color: #111827;
     }
     h2 {
@@ -87,6 +88,7 @@
       box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
       transition: all 0.35s ease;
     }
+
     a.inline-block:hover, button:hover {
       background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
       box-shadow: 0 12px 30px rgba(30, 64, 175, 0.6);
@@ -99,8 +101,8 @@
       border-radius: 0.75rem;
       border: 2px solid #d1d5db;
       transition: border-color 0.3s ease;
-      width: 100%;
     }
+
     input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
       border-color: #3b82f6;
       outline: none;
@@ -117,10 +119,11 @@
       font-size: 1rem;
       letter-spacing: 0.05em;
       background: #2563eb;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
       box-shadow: 0 -2px 10px rgba(37, 99, 235, 0.4);
+      user-select: none;
+      text-align: center;
+      padding: 1.5rem 0;
+      color: white;
     }
   </style>
 </head>
@@ -128,32 +131,32 @@
 
   <!-- Hero Section -->
   <header 
-    class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative rounded-lg w-full"
-    style="background-image: url('https://scontent-dfw5-2.xx.fbcdn.net/...');"
+    class="bg-cover bg-center h-80 md:h-[36rem] my-16 relative rounded-lg max-w-7xl mx-auto"
+    style="background-image: url('./images/3.jpg');"
   >
-    <div class="h-full flex items-center justify-center"></div>
+    <div class="relative max-w-7xl mx-auto h-full flex items-center justify-center"></div>
   </header>
 
-  <!-- Intro Text -->
-  <section class="text-center py-20 px-6 bg-white rounded-lg shadow-lg w-full -mt-20 relative z-10">
+  <!-- Text Section -->
+  <section class="text-center py-20 px-6 bg-white rounded-lg shadow-lg max-w-4xl mx-auto -mt-20 relative z-10">
     <h1>The Window Guys Consulting</h1>
     <p class="mb-10">Guidance from experts to enhance your window cleaning business.</p>
     <a href="#contact" class="inline-block">Get Started</a>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="w-full mt-20">
+  <!-- Services Section -->
+  <section id="services" class="mx-auto">
     <h2 class="text-center mb-14 text-white text-4xl font-bold">Our Services</h2>
-    <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <div class="bg-white p-8 rounded-2xl shadow-lg">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
         <h3 class="mb-3 text-xl font-semibold">Business Growth Planning</h3>
         <p class="text-gray-700">Simple, clear strategies to help your window cleaning business grow.</p>
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg">
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
         <h3 class="mb-3 text-xl font-semibold">Pricing & Financial Advice</h3>
         <p class="text-gray-700">Practical tips to improve your pricing and manage your finances better.</p>
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg">
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
         <h3 class="mb-3 text-xl font-semibold">Marketing & Customer Growth</h3>
         <p class="text-gray-700">Effective marketing ideas to attract more clients and grow your business.</p>
       </div>
@@ -161,7 +164,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="bg-gray-100 py-20 px-6 w-full mt-20">
+  <section id="about" class="bg-gray-100 py-20 px-6 rounded-lg max-w-6xl mx-auto mt-20 shadow-lg">
     <h2 class="text-center mb-10">About The Window Guys</h2>
     <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
       <div class="md:w-2/3 text-center md:text-left">
@@ -169,7 +172,7 @@
       </div>
       <div class="md:w-1/3">
         <img
-          src="https://scontent-dfw5-2.xx.fbcdn.net/..."
+          src="./images/1.jpg"
           alt="Window cleaning example"
           class="rounded-xl shadow-lg w-full object-cover"
         />
@@ -177,10 +180,10 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 px-6 w-full mt-20">
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 max-w-xl mx-auto mt-20">
     <h2 class="text-4xl font-bold text-center mb-10">Get in Touch</h2>
-    <div class="bg-white p-10 rounded-2xl shadow-xl max-w-xl mx-auto">
+    <div class="bg-white p-10 rounded-2xl shadow-xl">
       <form action="https://formspree.io/f/mkgrkqpw" method="POST" class="space-y-6">
         <input type="hidden" name="_redirect" value="https://yourwebsite.com" />
         <p class="text-center text-sm text-gray-600 mb-6">
