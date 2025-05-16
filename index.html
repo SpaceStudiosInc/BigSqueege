@@ -26,31 +26,53 @@
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="index.html" class="text-xl font-bold text-blue-600">The Window Guys</a>
-      <div class="space-x-6 hidden md:block">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-        <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
-        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+
+      <div class="flex items-center space-x-6">
+        <!-- Desktop links -->
+        <div class="hidden md:flex space-x-6">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+
+        <!-- Mobile hamburger button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="menu" class="hidden flex-col space-y-4 px-4 pb-4 md:hidden bg-white border-t border-gray-200">
+      <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2">Home</a>
+      <a href="services.html" class="block text-gray-700 hover:text-blue-600 py-2">Services</a>
+      <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2">About</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-<section 
-  class="relative bg-cover bg-center bg-fixed" 
-  style="height: 60vh; background-image: url('https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00002.jpg?raw=true');">
-  
-  <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="text-center text-white px-4">
-      <img src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Images/Logo.png" 
-           class="mx-auto w-80 mb-6" 
-           alt="Logo" />
-      <h1 class="text-4xl md:text-6xl font-bold">The Window Guys Consulting</h1>
-      <p class="mt-4 text-xl">Guidance from experts to enhance your window cleaning business. EST. 1993</p>
-      <a href="contact.html" class="btn-primary mt-6 inline-block">Get Started</a>
+  <section
+    class="relative bg-cover bg-center bg-fixed"
+    style="height: 60vh; background-image: url('https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00002.jpg?raw=true');">
+
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <img src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Images/Logo.png"
+          class="mx-auto w-56 md:w-80 mb-6"
+          alt="Logo" />
+        <h1 class="text-3xl md:text-6xl font-bold">The Window Guys Consulting</h1>
+        <p class="mt-4 text-lg md:text-xl">Guidance from experts to enhance your window cleaning business. EST. 1993</p>
+        <a href="contact.html" class="btn-primary mt-6 inline-block">Get Started</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Services -->
   <section id="services" class="py-20 bg-white">
@@ -132,6 +154,15 @@
   <footer class="bg-blue-600 text-white text-center py-6">
     © 2025 The Window Guys. All rights reserved.
   </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 
 </html>
