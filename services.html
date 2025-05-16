@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,26 +13,59 @@
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f9fafb;
-      color: #1f2937; /* Tailwind gray-800 */
+      color: #1f2937;
     }
 
     .btn-primary {
       @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300;
     }
 
-    /* subtle section backgrounds */
     section:nth-child(even) {
       background-color: #ffffff;
     }
 
     section:nth-child(odd) {
-      background-color: #f3f4f6; /* Tailwind gray-100 */
+      background-color: #f3f4f6;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.8s ease-out both;
+    }
+
+    .delay-1 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.6s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.8s;
+    }
+
+    .delay-5 {
+      animation-delay: 1s;
     }
   </style>
 </head>
 
-<body>
-  <!-- Navigation -->
+<body class="scroll-smooth">
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <a href="index.html" class="text-2xl font-extrabold text-blue-600">Squeege Solutions</a>
@@ -44,39 +78,34 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+  <header class="max-w-7xl mx-auto px-6 py-20 text-center animate-fade-in delay-1">
     <h1 class="text-5xl font-extrabold leading-tight max-w-3xl mx-auto mb-6">Window Cleaning Business Consulting That Delivers Growth</h1>
     <p class="text-lg text-gray-700 max-w-xl mx-auto mb-10">Expert strategies and coaching designed specifically for window cleaning pros who want to scale faster, streamline operations, and increase profits.</p>
     <a href="contact.html" class="btn-primary inline-block">Schedule a Free Consultation</a>
   </header>
 
-  <!-- Ideal Candidate Section -->
-  <section class="py-20 bg-white">
+  <section class="py-20 bg-white animate-fade-in delay-2">
     <div class="max-w-5xl mx-auto px-6 text-gray-800">
       <h2 class="text-4xl font-extrabold mb-8 text-center">Who Benefits Most from Our Coaching</h2>
       <p class="text-lg mb-10 max-w-3xl mx-auto text-center text-gray-700">
-        Our coaching program is specifically designed to empower window cleaning professionals at various stages of their journey. Whether you’re just starting out or looking to elevate an established business, this program will equip you with the tools and strategies to succeed.
+        Our coaching program is specifically designed to empower window cleaning professionals at various stages of their journey.
       </p>
       <ul class="max-w-3xl mx-auto space-y-5 list-disc list-inside text-gray-700 text-lg leading-relaxed">
-        <li><strong>New small business owners</strong> with 3 to 12 months of experience seeking to refine their cleaning techniques and grow their customer base.</li>
-        <li><strong>Experienced window cleaners and business owners</strong> who have reached a plateau and want to boost professionalism, efficiency, and scale their operations.</li>
-        <li><strong>Window cleaning companies</strong> aiming to develop promising employees into proficient, high-performing team members.</li>
-        <li><strong>Multi-service cleaning companies</strong> launching or expanding a window cleaning division, needing effective training for new staff.</li>
-        <li><strong>Franchise owners</strong> looking for a streamlined, comprehensive training program to launch their window cleaning business with confidence.</li>
+        <li><strong>New small business owners</strong> looking to refine techniques and grow their customer base.</li>
+        <li><strong>Established business owners</strong> seeking to scale and improve efficiency.</li>
+        <li><strong>Window cleaning companies</strong> training promising employees.</li>
+        <li><strong>Multi-service companies</strong> launching window cleaning services.</li>
+        <li><strong>Franchisees</strong> who need a proven onboarding program.</li>
       </ul>
     </div>
   </section>
 
-  <!-- Pricing Plans Section -->
-  <section class="py-20 max-w-7xl mx-auto px-6">
+  <section class="py-20 max-w-7xl mx-auto px-6 animate-fade-in delay-3">
     <h2 class="text-4xl font-extrabold mb-12 text-center">Our Pricing Plans</h2>
     <div class="grid gap-10 md:grid-cols-3">
-      
-      <!-- Basic Plan -->
-      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-fade-in delay-3">
         <h3 class="text-2xl font-bold mb-4 text-blue-600">Starter Plan</h3>
-        <p class="text-gray-700 mb-6 flex-grow">Perfect for new small business owners ready to refine their techniques and attract more clients.</p>
+        <p class="text-gray-700 mb-6 flex-grow">Perfect for new owners ready to refine techniques and attract more clients.</p>
         <ul class="list-disc list-inside text-gray-600 mb-8 space-y-2">
           <li>Client acquisition strategies</li>
           <li>Scheduling & routing basics</li>
@@ -87,10 +116,9 @@
         <a href="contact.html" class="btn-primary text-center">Get Started</a>
       </div>
 
-      <!-- Professional Plan -->
-      <div class="bg-blue-600 rounded-xl shadow-lg p-8 flex flex-col text-white border-4 border-blue-800">
+      <div class="bg-blue-600 rounded-xl shadow-lg p-8 flex flex-col text-white border-4 border-blue-800 animate-fade-in delay-4">
         <h3 class="text-2xl font-bold mb-4">Professional Plan</h3>
-        <p class="mb-6 flex-grow">Ideal for established window cleaning businesses aiming to scale commercial operations and increase efficiency.</p>
+        <p class="mb-6 flex-grow">Ideal for established businesses aiming to scale commercial operations.</p>
         <ul class="list-disc list-inside mb-8 space-y-2">
           <li>Lead generation & nurturing</li>
           <li>Proposal templates & CRM setup</li>
@@ -101,31 +129,27 @@
         <a href="contact.html" class="btn-primary bg-white text-blue-600 hover:bg-gray-100 mx-auto">Book Now</a>
       </div>
 
-      <!-- Ultimate Plan -->
-      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col">
+      <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col animate-fade-in delay-5">
         <h3 class="text-2xl font-bold mb-4 text-blue-600">Ultimate Growth</h3>
-        <p class="text-gray-700 mb-6 flex-grow">Comprehensive coaching to overhaul your entire business: leadership, branding, operations, hiring, and more.</p>
+        <p class="text-gray-700 mb-6 flex-grow">Full-spectrum coaching: leadership, branding, hiring, and more.</p>
         <ul class="list-disc list-inside text-gray-600 mb-8 space-y-2">
           <li>Weekly live coaching sessions</li>
-          <li>Business system design & accountability</li>
-          <li>Brand & marketing strategies</li>
-          <li>Leadership training & hiring support</li>
+          <li>Business system design</li>
+          <li>Marketing strategies</li>
+          <li>Leadership & hiring support</li>
         </ul>
         <p class="text-3xl font-extrabold mb-6">$1499</p>
         <a href="contact.html" class="btn-primary text-center">Apply Now</a>
       </div>
-
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="bg-blue-600 py-20 text-white text-center px-6">
+  <section class="bg-blue-600 py-20 text-white text-center px-6 animate-fade-in delay-4">
     <h2 class="text-4xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Ready to take your window cleaning business to the next level?</h2>
-    <p class="mb-10 max-w-xl mx-auto text-lg">Join countless successful business owners who’ve accelerated growth with our expert coaching and proven systems.</p>
+    <p class="mb-10 max-w-xl mx-auto text-lg">Join others who’ve accelerated growth with expert coaching and proven systems.</p>
     <a href="contact.html" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">Get Your Free Strategy Call</a>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 text-center py-8 mt-20">
     © 2025 Squeege Solutions. All rights reserved.
   </footer>
