@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | The Window Guys</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="text-gray-800 bg-white">
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-blue-600">The Window Guys</a>
+      <div class="space-x-6 hidden md:block">
+        <a href="services.html" class="text-blue-600 font-semibold">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <!-- Copy the services grid here from index.html -->
+    </div>
+  </section>
+
+  <footer class="bg-blue-600 text-white text-center py-6">
+    © 2025 The Window Guys. All rights reserved.
+  </footer>
+</body>
+</html>
