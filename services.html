@@ -16,12 +16,13 @@
     }
 
     .btn-primary {
-      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow;
+      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded shadow;
     }
   </style>
 </head>
 
 <body class="text-gray-800">
+
   <!-- Navigation -->
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -35,76 +36,74 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-50 py-20">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h1 class="text-4xl font-bold mb-4">Grow Your Window Cleaning Business</h1>
-      <p class="text-lg mb-6">Tailored consulting packages to help you scale faster, serve better, and earn more.</p>
-      <a href="contact.html" class="btn-primary inline-block">Get Started Today</a>
+  <!-- Service Section 1: Residential (Text Left, Image Right) -->
+  <section class="w-full bg-white py-20 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
+      <!-- Text -->
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl font-bold mb-6">Residential Mastery</h2>
+        <p class="mb-6 text-lg max-w-xl">Learn how to dominate your local market, maximize client retention, and scale your home-service operations with expert consulting tailored to residential window cleaning businesses.</p>
+        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
+          <li>Client acquisition strategy</li>
+          <li>Scheduling & routing efficiency</li>
+          <li>Tech stack recommendations</li>
+          <li>Phone & upsell scripts</li>
+        </ul>
+        <p class="text-2xl font-bold mb-4">$499</p>
+        <a href="contact.html" class="btn-primary inline-block">Book Now</a>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00007.jpg?raw=true" alt="Residential Window Cleaning" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+      </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-16">Our Consulting Packages</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <!-- Residential Package -->
-        <div class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col justify-between">
-          <div>
-            <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00007.jpg?raw=true" class="rounded-xl mb-6 w-full h-48 object-cover" alt="Residential" />
-            <h3 class="text-2xl font-semibold mb-3">Residential Mastery</h3>
-            <p class="mb-4">Learn how to dominate your local market, maximize client retention, and scale your home-service operations.</p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-              <li>Client acquisition strategy</li>
-              <li>Scheduling & routing efficiency</li>
-              <li>Tech stack recommendations</li>
-              <li>Phone & upsell scripts</li>
-            </ul>
-          </div>
-          <div class="mt-auto text-center">
-            <p class="text-2xl font-bold mb-3">$499</p>
-            <a href="contact.html" class="btn-primary">Book Now</a>
-          </div>
-        </div>
+  <!-- Service Section 2: Commercial (Image Left, Text Right) -->
+  <section class="w-full bg-blue-50 py-20 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
+      <!-- Image -->
+      <div class="md:w-1/2 order-2 md:order-1 mb-10 md:mb-0">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00003.jpg?raw=true" alt="Commercial Window Cleaning" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+      </div>
 
-        <!-- Commercial Package -->
-        <div class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col justify-between">
-          <div>
-            <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00003.jpg?raw=true" class="rounded-xl mb-6 w-full h-48 object-cover" alt="Commercial" />
-            <h3 class="text-2xl font-semibold mb-3">Commercial Expansion</h3>
-            <p class="mb-4">Break into and scale your presence in the commercial window cleaning market with confidence and strategy.</p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-              <li>Lead generation systems</li>
-              <li>Proposal templates</li>
-              <li>CRM & follow-up automation</li>
-              <li>Operations SOPs</li>
-            </ul>
-          </div>
-          <div class="mt-auto text-center">
-            <p class="text-2xl font-bold mb-3">$899</p>
-            <a href="contact.html" class="btn-primary">Book Now</a>
-          </div>
-        </div>
+      <!-- Text -->
+      <div class="md:w-1/2 order-1 md:order-2">
+        <h2 class="text-4xl font-bold mb-6">Commercial Expansion</h2>
+        <p class="mb-6 text-lg max-w-xl">Break into and scale your presence in the commercial window cleaning market with confidence and proven strategies designed specifically for commercial business growth.</p>
+        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
+          <li>Lead generation systems</li>
+          <li>Proposal templates</li>
+          <li>CRM & follow-up automation</li>
+          <li>Operations SOPs</li>
+        </ul>
+        <p class="text-2xl font-bold mb-4">$899</p>
+        <a href="contact.html" class="btn-primary inline-block">Book Now</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Growth Strategy Package -->
-        <div class="bg-gray-50 rounded-2xl shadow-lg p-8 flex flex-col justify-between">
-          <div>
-            <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00006.jpg?raw=true" class="rounded-xl mb-6 w-full h-48 object-cover" alt="Much More" />
-            <h3 class="text-2xl font-semibold mb-3">Ultimate Growth Package</h3>
-            <p class="mb-4">Comprehensive coaching to optimize every area of your business for high growth and long-term success.</p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
-              <li>Weekly coaching sessions</li>
-              <li>System design & accountability</li>
-              <li>Brand development</li>
-              <li>Leadership & hiring systems</li>
-            </ul>
-          </div>
-          <div class="mt-auto text-center">
-            <p class="text-2xl font-bold mb-3">$1499</p>
-            <a href="contact.html" class="btn-primary">Apply Now</a>
-          </div>
-        </div>
+  <!-- Service Section 3: Ultimate Growth (Text Left, Image Right) -->
+  <section class="w-full bg-white py-20 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
+      <!-- Text -->
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl font-bold mb-6">Ultimate Growth Package</h2>
+        <p class="mb-6 text-lg max-w-xl">Comprehensive coaching to optimize every area of your business for high growth and long-term success, including leadership, systems, and brand development.</p>
+        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
+          <li>Weekly coaching sessions</li>
+          <li>System design & accountability</li>
+          <li>Brand development</li>
+          <li>Leadership & hiring systems</li>
+        </ul>
+        <p class="text-2xl font-bold mb-4">$1499</p>
+        <a href="contact.html" class="btn-primary inline-block">Apply Now</a>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00006.jpg?raw=true" alt="Growth Coaching" class="rounded-lg shadow-lg w-full h-auto object-cover" />
       </div>
     </div>
   </section>
@@ -112,7 +111,7 @@
   <!-- Call to Action -->
   <section class="bg-blue-600 text-white py-16 text-center">
     <h2 class="text-3xl font-bold mb-4">Ready to Level Up Your Business?</h2>
-    <p class="mb-6">Join dozens of successful window cleaning businesses already thriving with our consulting programs.</p>
+    <p class="mb-6 max-w-xl mx-auto">Join dozens of successful window cleaning businesses already thriving with our consulting programs.</p>
     <a href="contact.html" class="btn-primary">Get a Free Strategy Call</a>
   </section>
 
@@ -120,6 +119,7 @@
   <footer class="bg-gray-800 text-white text-center py-6">
     © 2025 The Window Guys. All rights reserved.
   </footer>
+
 </body>
 
 </html>
