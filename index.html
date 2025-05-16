@@ -3,52 +3,43 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Squeege Solutions</title>
   <meta name="description" content="Window cleaning business consulting services to help your business grow." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f8fafc;
       margin: 0;
     }
 
     .btn-primary {
-      @apply bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-white font-semibold py-2 px-6 rounded shadow;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded shadow;
     }
   </style>
 </head>
 
-<body class="text-gray-800 scroll-smooth">
+<body class="text-gray-800">
   <!-- Navigation -->
   <nav class="bg-white shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <button type="button" onclick="scrollToSection('hero')" class="text-xl font-bold text-blue-600 flex items-center space-x-3">
-        <img src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Images/Logo.png" alt="Logo" class="w-8 h-8" />
-        <span>Squeege Solutions</span>
-      </button>
+      <a href="index.html" class="text-xl font-bold text-blue-600">Squeege Solutions</a>
+
       <div class="flex items-center space-x-6">
+        <!-- Desktop links -->
         <div class="hidden md:flex space-x-6">
-          <button type="button" onclick="scrollToSection('hero')" class="text-gray-700 hover:text-blue-600">Home</button>
-          <button type="button" onclick="scrollToSection('pricing')" class="text-gray-700 hover:text-blue-600">Pricing</button>
-          <button type="button" onclick="scrollToSection('about')" class="text-gray-700 hover:text-blue-600">About</button>
+          <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
         </div>
+
+        <!-- Mobile hamburger button -->
         <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
-          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-            stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <line x1="3" y1="12" x2="21" y2="12" />
             <line x1="3" y1="6" x2="21" y2="6" />
             <line x1="3" y1="18" x2="21" y2="18" />
@@ -56,89 +47,122 @@
         </button>
       </div>
     </div>
+
+    <!-- Mobile menu -->
     <div id="menu" class="hidden flex-col space-y-4 px-4 pb-4 md:hidden bg-white border-t border-gray-200">
-      <button type="button" onclick="scrollToSection('hero')" class="block text-gray-700 hover:text-blue-600 py-2 text-left">Home</button>
-      <button type="button" onclick="scrollToSection('pricing')" class="block text-gray-700 hover:text-blue-600 py-2 text-left">Pricing</button>
-      <button type="button" onclick="scrollToSection('about')" class="block text-gray-700 hover:text-blue-600 py-2 text-left">About</button>
+      <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2">Home</a>
+      <a href="services.html" class="block text-gray-700 hover:text-blue-600 py-2">Services</a>
+      <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2">About</a>
+      <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="relative bg-cover bg-center bg-fixed h-[60vh]" style="background-image: url('https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00002.jpg?raw=true');">
+  <section
+    class="relative bg-cover bg-center bg-fixed"
+    style="height: 60vh; background-image: url('https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00002.jpg?raw=true');">
+
     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div class="text-center text-white px-4 fade-in">
-        <img src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Images/Logo.png" class="mx-auto w-56 md:w-80 mb-6" alt="Logo" />
+      <div class="text-center text-white px-4">
+        <img src="https://raw.githubusercontent.com/SpaceStudiosInc/BigSqueege/refs/heads/main/Images/Logo.png"
+          class="mx-auto w-56 md:w-80 mb-6"
+          alt="Logo" />
         <h1 class="text-3xl md:text-6xl font-bold">Squeege Solutions Consulting</h1>
         <p class="mt-4 text-lg md:text-xl">Expert Insights to Elevate Your Window Cleaning Business.</p>
-        <button type="button" onclick="scrollToSection('pricing')" class="btn-primary mt-6 inline-block">Enroll</button>
+        <a href="contact.html" class="btn-primary mt-6 inline-block">Enroll</a>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Plans -->
-  <section id="pricing" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 fade-in">
-      <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div
-          class="bg-white shadow-lg rounded-lg p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold mb-4">Residential Plan</h3>
-          <p class="mb-6">Ideal for homeowners looking to streamline their window cleaning operations with expert guidance on efficiency and quality.</p>
-          <ul class="mb-6 list-disc list-inside text-gray-700 space-y-2">
-            <li>Process optimization tailored for residential needs</li>
-            <li>Team training and best practice coaching</li>
-            <li>Customer satisfaction strategies</li>
-          </ul>
-          <button type="button" onclick="scrollToSection('about')" class="btn-primary">Learn More</button>
+  <!-- Services -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Tailored Solutions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00007.jpg?raw=true"
+            class="h-40 w-full object-cover rounded mb-4" alt="Residential" />
+          <h3 class="text-xl font-semibold mb-2">Residential</h3>
+          <p>Strategic consulting to enhance residential window cleaning processes, increase operational efficiency, and consistently exceed homeowner expectations.</p>
         </div>
-        <div
-          class="bg-white shadow-lg rounded-lg p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold mb-4">Commercial Plan</h3>
-          <p class="mb-6">Designed for businesses seeking to manage complex cleaning projects efficiently while maintaining top-notch service quality.</p>
-          <ul class="mb-6 list-disc list-inside text-gray-700 space-y-2">
-            <li>Workflow streamlining for commercial properties</li>
-            <li>Project management and scheduling</li>
-            <li>Quality control and client communication</li>
-          </ul>
-          <button type="button" onclick="scrollToSection('about')" class="btn-primary">Learn More</button>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00003.jpg?raw=true"
+            class="h-40 w-full object-cover rounded mb-4" alt="Commercial" />
+          <h3 class="text-xl font-semibold mb-2">Commercial</h3>
+          <p>Comprehensive consulting to streamline commercial window cleaning workflows, manage complex projects, and ensure exceptional service quality for business clients.</p>
         </div>
-        <div
-          class="bg-white shadow-lg rounded-lg p-8 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300">
-          <h3 class="text-2xl font-semibold mb-4">Storefront Plan</h3>
-          <p class="mb-6">Focuses on elevating storefront appearances to boost curb appeal and customer engagement through effective cleaning management.</p>
-          <ul class="mb-6 list-disc list-inside text-gray-700 space-y-2">
-            <li>Storefront-specific cleaning optimization</li>
-            <li>Brand image enhancement strategies</li>
-            <li>Scheduling and team oversight</li>
-          </ul>
-          <button type="button" onclick="scrollToSection('about')" class="btn-primary">Learn More</button>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00006.jpg?raw=true"
+            class="h-40 w-full object-cover rounded mb-4" alt="Much More" />
+          <h3 class="text-xl font-semibold mb-2">Commercial Storefront</h3>
+          <p>Focused consulting to optimize storefront window cleaning, elevate curb appeal, and drive customer engagement through impeccable presentation.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- About / Meet the Founder -->
-  <section id="about" class="bg-gray-50 py-20">
-    <div class="max-w-5xl mx-auto px-6 fade-in">
-      <h2 class="text-3xl font-semibold text-center text-gray-900 mb-16">About Us</h2>
-      <div class="flex flex-col md:flex-row md:space-x-16 items-center">
-        <div class="md:w-1/2 space-y-6">
-          <h3 class="text-2xl font-semibold text-gray-900">Mike Nichols — Owner & Founder</h3>
-          <p class="text-gray-700 leading-relaxed">
-            With over 30 years of experience managing window cleaning operations across Arkansas and Oklahoma, Mike Nichols specializes in guiding teams and optimizing business workflows.
-          </p>
-          <p class="text-gray-700 leading-relaxed">
-            His expertise lies in management — overseeing residential, commercial, and storefront projects to ensure efficiency, quality, and exceptional customer satisfaction.
-          </p>
-          <p class="text-gray-700 leading-relaxed">
-            Under his leadership, Squeege Solutions has grown into a trusted regional brand known for professionalism, reliability, and smart business strategy.
-          </p>
-          <button type="button" onclick="scrollToSection('pricing')" class="btn-primary inline-block mt-4">Explore Our Plans</button>
+<section id="about" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold text-center text-gray-900 mb-16">Meet the Founder</h2>
+
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-16">
+      <!-- Text content -->
+      <div class="md:w-1/2 space-y-6">
+        <h3 class="text-2xl font-semibold text-gray-900">Experience That Counts</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Since 1993, Mike Nichols has dedicated his career to perfecting window and exterior cleaning across Arkansas and Oklahoma. With over 30 years of hands-on experience, Mike has mastered industry best practices and innovative cleaning techniques that ensure exceptional results.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Mike’s expertise spans residential homes, commercial properties, and storefronts, allowing Squeege Solutions to provide tailored solutions that meet the unique needs of each client. Licensed, insured, and deeply committed to delivering outstanding service, Mike personally oversees quality assurance on every project.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Under Mike’s leadership, Squeege Solutions have grown from a small local business into a trusted regional brand recognized for professionalism, reliability, and customer satisfaction.
+        </p>
+      </div>
+
+      <!-- Image and founder name -->
+      <div class="md:w-1/2 mt-10 md:mt-0 flex flex-col items-center">
+        <img
+          src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/Profile.jpg?raw=true"
+          alt="Mike Nichols"
+          class="rounded-lg shadow-lg w-full max-w-sm object-cover"
+        />
+        <p class="mt-4 text-sm italic text-gray-500 text-center">
+          Mike Nichols — Owner and Founder of Squeege Solutions
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Let’s Connect</h2>
+      <div class="md:flex md:space-x-10">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <p class="mb-6">Feel free to send us a message. Our team will respond promptly. We respect your time and privacy.</p>
+          <div class="flex space-x-6">
+            <a href="https://www.facebook.com/cleanwindows4you" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.citypng.com/public/uploads/preview/square-facebook-fb-social-media-app-icon-logo-701751695134768wct6irlkok.png"
+                alt="Facebook" class="w-10 h-10" />
+            </a>
+            <a href="https://www.youtube.com/@thewindowguys2960" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.svgrepo.com/show/473495/youtube.svg" alt="YouTube" class="w-10 h-10" />
+            </a>
+          </div>
         </div>
-        <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-          <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/Profile.jpg?raw=true" alt="Mike Nichols"
-            class="rounded-lg shadow-lg max-w-sm object-cover" />
-        </div>
+        <form action="#" method="POST" class="md:w-1/2 space-y-4">
+          <input type="text" name="name" placeholder="Your full name"
+            class="w-full border border-gray-300 rounded px-4 py-2" />
+          <input type="email" name="email" placeholder="your.email@example.com"
+            class="w-full border border-gray-300 rounded px-4 py-2" />
+          <textarea name="message" rows="4" placeholder="Write your message here"
+            class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
+          <button type="submit" class="btn-primary w-full">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
@@ -149,33 +173,12 @@
   </footer>
 
   <script>
-    // Toggle mobile menu
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-    // Intersection Observer for fade-in animations
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => observer.observe(el));
-
-    // Smooth scroll helper
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        if (!menu.classList.contains('hidden')) {
-          menu.classList.add('hidden'); // Close mobile menu on navigation
-        }
-      }
-    }
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
   </script>
 </body>
 
