@@ -8,118 +8,129 @@
   <meta name="description" content="Window cleaning business consulting services to help your business grow." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f8fafc;
+      background-color: #f9fafb;
+      color: #1f2937; /* Tailwind gray-800 */
     }
 
     .btn-primary {
-      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded shadow;
+      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300;
+    }
+
+    /* subtle section backgrounds */
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    section:nth-child(odd) {
+      background-color: #f3f4f6; /* Tailwind gray-100 */
     }
   </style>
 </head>
 
-<body class="text-gray-800">
-
+<body>
   <!-- Navigation -->
   <nav class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold text-blue-600">The Window Guys</a>
-      <div class="space-x-6 hidden md:block">
-        <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
-        <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
-        <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-extrabold text-blue-600">The Window Guys</a>
+      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="services.html" class="hover:text-blue-600 transition">Services</a>
+        <a href="about.html" class="hover:text-blue-600 transition">About</a>
+        <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Service Section 1: Residential (Text Left, Image Right) -->
-  <section class="w-full bg-white py-20 border-b border-gray-200">
+  <!-- Hero -->
+  <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl font-extrabold leading-tight max-w-3xl mx-auto mb-6">Window Cleaning Business Consulting That Delivers Growth</h1>
+    <p class="text-lg text-gray-700 max-w-xl mx-auto mb-10">Expert strategies and coaching designed specifically for window cleaning pros who want to scale faster, streamline operations, and increase profits.</p>
+    <a href="contact.html" class="btn-primary inline-block">Schedule a Free Consultation</a>
+  </header>
+
+  <!-- Section 1: Residential -->
+  <section class="py-20">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
-      <!-- Text -->
+      <!-- Text Left -->
       <div class="md:w-1/2 mb-10 md:mb-0">
-        <h2 class="text-4xl font-bold mb-6">Residential Mastery</h2>
-        <p class="mb-6 text-lg max-w-xl">Learn how to dominate your local market, maximize client retention, and scale your home-service operations with expert consulting tailored to residential window cleaning businesses.</p>
-        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
-          <li>Client acquisition strategy</li>
-          <li>Scheduling & routing efficiency</li>
-          <li>Tech stack recommendations</li>
-          <li>Phone & upsell scripts</li>
+        <h2 class="text-4xl font-extrabold mb-6">Residential Mastery</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">Optimize your residential window cleaning business with proven tactics to attract and retain customers, increase efficiency, and grow your revenue.</p>
+        <ul class="list-disc list-inside space-y-3 text-gray-600 mb-6 max-w-md">
+          <li>Targeted client acquisition strategies</li>
+          <li>Smart scheduling & routing</li>
+          <li>Recommended tech stack & tools</li>
+          <li>Effective upselling scripts & customer service</li>
         </ul>
-        <p class="text-2xl font-bold mb-4">$499</p>
-        <a href="contact.html" class="btn-primary inline-block">Book Now</a>
+        <p class="text-3xl font-bold mb-6">$499</p>
+        <a href="contact.html" class="btn-primary">Book Now</a>
       </div>
+      <!-- Image Right -->
+      <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00007.jpg?raw=true" alt="Residential Window Cleaning" class="w-full h-auto object-cover" />
+      </div>
+    </div>
+  </section>
 
-      <!-- Image -->
+  <!-- Section 2: Commercial -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
+      <!-- Image Left -->
+      <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg mb-10 md:mb-0">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00003.jpg?raw=true" alt="Commercial Window Cleaning" class="w-full h-auto object-cover" />
+      </div>
+      <!-- Text Right -->
       <div class="md:w-1/2">
-        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00007.jpg?raw=true" alt="Residential Window Cleaning" class="rounded-lg shadow-lg w-full h-auto object-cover" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Section 2: Commercial (Image Left, Text Right) -->
-  <section class="w-full bg-blue-50 py-20 border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
-      <!-- Image -->
-      <div class="md:w-1/2 order-2 md:order-1 mb-10 md:mb-0">
-        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00003.jpg?raw=true" alt="Commercial Window Cleaning" class="rounded-lg shadow-lg w-full h-auto object-cover" />
-      </div>
-
-      <!-- Text -->
-      <div class="md:w-1/2 order-1 md:order-2">
-        <h2 class="text-4xl font-bold mb-6">Commercial Expansion</h2>
-        <p class="mb-6 text-lg max-w-xl">Break into and scale your presence in the commercial window cleaning market with confidence and proven strategies designed specifically for commercial business growth.</p>
-        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
-          <li>Lead generation systems</li>
-          <li>Proposal templates</li>
-          <li>CRM & follow-up automation</li>
-          <li>Operations SOPs</li>
+        <h2 class="text-4xl font-extrabold mb-6">Commercial Expansion</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">Expand your commercial window cleaning services with scalable systems, strong proposals, and streamlined operations that attract larger clients.</p>
+        <ul class="list-disc list-inside space-y-3 text-gray-600 mb-6 max-w-md">
+          <li>Lead generation & nurturing</li>
+          <li>Winning proposal templates</li>
+          <li>CRM & automated follow-ups</li>
+          <li>Standard operating procedures for teams</li>
         </ul>
-        <p class="text-2xl font-bold mb-4">$899</p>
-        <a href="contact.html" class="btn-primary inline-block">Book Now</a>
+        <p class="text-3xl font-bold mb-6">$899</p>
+        <a href="contact.html" class="btn-primary">Book Now</a>
       </div>
     </div>
   </section>
 
-  <!-- Service Section 3: Ultimate Growth (Text Left, Image Right) -->
-  <section class="w-full bg-white py-20 border-b border-gray-200">
+  <!-- Section 3: Ultimate Growth -->
+  <section class="py-20">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center md:space-x-20">
-      <!-- Text -->
+      <!-- Text Left -->
       <div class="md:w-1/2 mb-10 md:mb-0">
-        <h2 class="text-4xl font-bold mb-6">Ultimate Growth Package</h2>
-        <p class="mb-6 text-lg max-w-xl">Comprehensive coaching to optimize every area of your business for high growth and long-term success, including leadership, systems, and brand development.</p>
-        <ul class="list-disc list-inside mb-6 space-y-2 max-w-xl text-gray-700">
-          <li>Weekly coaching sessions</li>
-          <li>System design & accountability</li>
-          <li>Brand development</li>
-          <li>Leadership & hiring systems</li>
+        <h2 class="text-4xl font-extrabold mb-6">Ultimate Growth Package</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">Full-spectrum coaching designed to transform your entire business — leadership, branding, operations, hiring, and more.</p>
+        <ul class="list-disc list-inside space-y-3 text-gray-600 mb-6 max-w-md">
+          <li>Weekly live coaching sessions</li>
+          <li>Business system design & accountability</li>
+          <li>Brand development & marketing strategies</li>
+          <li>Leadership training & hiring support</li>
         </ul>
-        <p class="text-2xl font-bold mb-4">$1499</p>
-        <a href="contact.html" class="btn-primary inline-block">Apply Now</a>
+        <p class="text-3xl font-bold mb-6">$1499</p>
+        <a href="contact.html" class="btn-primary">Apply Now</a>
       </div>
-
-      <!-- Image -->
-      <div class="md:w-1/2">
-        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00006.jpg?raw=true" alt="Growth Coaching" class="rounded-lg shadow-lg w-full h-auto object-cover" />
+      <!-- Image Right -->
+      <div class="md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+        <img src="https://github.com/SpaceStudiosInc/BigSqueege/blob/main/Images/WindowCleaning00006.jpg?raw=true" alt="Ultimate Growth Coaching" class="w-full h-auto object-cover" />
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="bg-blue-600 text-white py-16 text-center">
-    <h2 class="text-3xl font-bold mb-4">Ready to Level Up Your Business?</h2>
-    <p class="mb-6 max-w-xl mx-auto">Join dozens of successful window cleaning businesses already thriving with our consulting programs.</p>
-    <a href="contact.html" class="btn-primary">Get a Free Strategy Call</a>
+  <!-- Final CTA -->
+  <section class="bg-blue-600 py-20 text-white text-center px-6">
+    <h2 class="text-4xl font-extrabold mb-6 max-w-3xl mx-auto leading-tight">Ready to take your window cleaning business to the next level?</h2>
+    <p class="mb-10 max-w-xl mx-auto text-lg">Join countless successful business owners who’ve accelerated growth with our expert coaching and proven systems.</p>
+    <a href="contact.html" class="btn-primary bg-white text-blue-600 hover:bg-gray-100">Get Your Free Strategy Call</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-6">
+  <footer class="bg-gray-900 text-gray-300 text-center py-8 mt-20">
     © 2025 The Window Guys. All rights reserved.
   </footer>
-
 </body>
 
 </html>
